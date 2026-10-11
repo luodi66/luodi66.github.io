@@ -4,54 +4,57 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>编程练习 · 隐私政策</title>
-<meta name="description" content="编程练习 App 的隐私政策：不收集任何个人信息，代码只保存在你的设备上。">
 <link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="alternate" hreflang="zh-CN" href="https://luodi66.github.io/codepad/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://luodi66.github.io/codepad/zh-hant/privacy.html">
+<link rel="alternate" hreflang="en" href="https://luodi66.github.io/codepad/en/privacy.html">
 <style>
-  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --accent: #3b63f3; }
-  @media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --accent: #7f9bff; } }
+  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --card: #f5f5f7; --accent: #3b63f3; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --card: #1c1c1e; --accent: #7f9bff; } }
   * { box-sizing: border-box; }
-  body { margin: 0; color: var(--fg); background: var(--bg); line-height: 1.8;
-         font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
-  h1 { font-size: 26px; margin: 0 0 4px; }
-  h2 { font-size: 18px; margin: 28px 0 6px; }
+  body { margin: 0; color: var(--fg); background: var(--bg); line-height: 1.75;
+         font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 20px 20px 48px; }
+  nav.langs { text-align: right; font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+  nav.langs a, nav.langs strong { margin-left: 12px; }
+  header { display: flex; align-items: center; gap: 16px; }
+  header img { width: 72px; height: 72px; border-radius: 16px; }
+  h1 { font-size: 28px; margin: 0; line-height: 1.3; }
+  .subtitle { color: var(--muted); margin: 4px 0 0; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  h3 { font-size: 16px; margin: 0 0 4px; }
   p { margin: 6px 0; }
+  .card { background: var(--card); border-radius: 14px; padding: 14px 18px; margin: 12px 0; }
   .muted { color: var(--muted); font-size: 14px; }
   a { color: var(--accent); }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.92em; }
   footer { color: var(--muted); font-size: 14px; margin-top: 40px; }
 </style>
 </head>
 <body>
 <main>
+  <nav class="langs"><strong>简体中文</strong><a href="zh-hant/privacy.html" hreflang="zh-Hant">繁體中文</a><a href="en/privacy.html" hreflang="en">English</a></nav>
   <h1>编程练习隐私政策</h1>
   <p class="muted">更新日期：2026 年 10 月 11 日</p>
-
   <p>“编程练习”（以下简称“本 App”）是由开发者 Hongqun Luo（以下简称“我们”）提供的编程练习工具。我们非常重视你的隐私，本政策说明本 App 如何处理你的信息。</p>
-
   <h2>一、我们不收集任何个人信息</h2>
   <p>本 App 不需要注册或登录，不收集、不上传、不与任何人共享你的个人信息，包括姓名、手机号、设备标识符、位置、通讯录、照片和使用记录等。本 App 没有广告，也没有接入任何第三方统计、广告、推送或登录 SDK。</p>
-
   <h2>二、代码和设置只保存在你的设备上</h2>
   <p>你写的代码、作业和个性化设置只保存在你的设备上，我们无法查看。代码的编译和运行全部在设备上离线完成，不会发送到任何服务器。</p>
   <p>作业也可以在“文件”App 的“我的 iPhone”（iPad 上为“我的 iPad”）→“编程练习”里找到。删除本 App 会同时删除这些数据；如需保留，请先在本 App 中使用“导出全部作业（备份）”。</p>
-
   <h2>三、网络</h2>
   <p>本 App 的编辑、编译和运行功能都不需要联网，App 不会向任何服务器发送数据。只有当你在“关于”页面点击使用帮助、开源组件等链接时，才会用浏览器打开相应网站，这些网站如何处理信息由其运营者负责。</p>
-
   <h2>四、系统权限</h2>
   <p>本 App 不申请相机、麦克风、位置、通讯录等权限，也不会读取你的照片。</p>
   <p>只有当你把代码导出为图片、并在分享面板中选择“存储图像”时，系统才会询问是否允许本 App 向“照片”添加图片；本 App 只会保存你导出的那张图片。</p>
   <p>你主动导入文件时，本 App 只读取你选择的文件；你主动导出或分享时，内容会发送到你选择的 App（例如微信、“文件”），之后如何处理由该 App 负责。</p>
-
   <h2>五、未成年人</h2>
   <p>本 App 适合学生使用。由于本 App 不收集任何个人信息，未成年人使用时同样不会有个人信息被收集。</p>
-
   <h2>六、政策更新</h2>
   <p>本政策如有更新，我们会在本 App 和网页上发布新版本，并更新顶部的日期。</p>
-
   <h2>七、联系我们</h2>
   <p>如对本政策有任何疑问，请发送邮件至 <a href="mailto:849563983@qq.com">849563983@qq.com</a>。</p>
-
   <footer><a href="./">编程练习 · 使用帮助</a> · © 2026 Hongqun Luo</footer>
 </main>
 </body>

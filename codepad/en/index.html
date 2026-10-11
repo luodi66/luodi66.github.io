@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code Practice · Help</title>
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="alternate" hreflang="zh-CN" href="https://luodi66.github.io/codepad/">
+<link rel="alternate" hreflang="zh-Hant" href="https://luodi66.github.io/codepad/zh-hant/">
+<link rel="alternate" hreflang="en" href="https://luodi66.github.io/codepad/en/">
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --card: #f5f5f7; --accent: #3b63f3; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --card: #1c1c1e; --accent: #7f9bff; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--fg); background: var(--bg); line-height: 1.75;
+         font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 20px 20px 48px; }
+  nav.langs { text-align: right; font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+  nav.langs a, nav.langs strong { margin-left: 12px; }
+  header { display: flex; align-items: center; gap: 16px; }
+  header img { width: 72px; height: 72px; border-radius: 16px; }
+  h1 { font-size: 28px; margin: 0; line-height: 1.3; }
+  .subtitle { color: var(--muted); margin: 4px 0 0; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  h3 { font-size: 16px; margin: 0 0 4px; }
+  p { margin: 6px 0; }
+  .card { background: var(--card); border-radius: 14px; padding: 14px 18px; margin: 12px 0; }
+  .muted { color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.92em; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<main>
+  <nav class="langs"><a href="../" hreflang="zh-CN">简体中文</a><a href="../zh-hant/" hreflang="zh-Hant">繁體中文</a><strong>English</strong></nav>
+  <header>
+    <img src="../icon.png" alt="Code Practice">
+    <div>
+      <h1>Code Practice</h1>
+      <p class="subtitle">Run C++ and Python code offline on iPhone and iPad</p>
+    </div>
+  </header>
+  <p>Code Practice is an app for writing and running code. C++ and Python programs compile and run right on your device, with no internet connection or computer needed. Plain-language hints explain errors, which makes it great for students practicing after class and doing homework. The interface is available in English, Simplified Chinese and Traditional Chinese.</p>
+  <h2>Contact us</h2>
+  <div class="card">
+    <p>Questions or suggestions? Email <a href="mailto:849563983@qq.com">849563983@qq.com</a>.</p>
+    <p>When reporting a problem, please include your device model (for example iPhone 15), your iOS version, and the code and input that caused the problem.</p>
+  </div>
+  <h2>FAQ</h2>
+  <div class="card">
+    <h3>How do I give my program input (cin, input())?</h3>
+    <p>There are two ways. (1) Just run it: when the program waits for input, the box at the bottom of the console turns orange; type there and press Return. (2) Before running, turn on “Preset Input” and enter all the input at once, which is handy when there is a lot of data.</p>
+  </div>
+  <div class="card">
+    <h3>I don’t understand a compile error. What can I do?</h3>
+    <p>The line with the error is highlighted in red, and the console adds a plain-language hint about what is probably wrong. Before running, the app also checks for Chinese (full-width) punctuation such as “；” or “（）” and offers to fix it in one tap.</p>
+  </div>
+  <div class="card">
+    <h3>Which C++ standards are supported?</h3>
+    <p>C++11, C++14, C++17 and C++20. Change it in Settings, or tap the standard shown at the top right of the code screen (for example “C++17”). <code>#include &lt;bits/stdc++.h&gt;</code> is supported too.</p>
+  </div>
+  <div class="card">
+    <h3>Why can’t I use try / catch?</h3>
+    <p>The built-in C++ compiler doesn’t support exceptions yet, so code that uses <code>try</code> or <code>throw</code> won’t compile. Handle errors with return values or <code>if</code> checks instead.</p>
+  </div>
+  <div class="card">
+    <h3>Can C++ programs read or write files, or use threads?</h3>
+    <p>Not yet. File I/O (<code>fstream</code>, <code>freopen</code>) and multithreading aren’t supported. When practicing, comment out <code>freopen</code> and type the input directly.</p>
+  </div>
+  <div class="card">
+    <h3>Can I use numpy or turtle in Python?</h3>
+    <p>No. Only the Python standard library (such as math, random and collections) is included. Third-party packages can’t be installed, and turtle and other features that need a graphics window aren’t supported.</p>
+  </div>
+  <div class="card">
+    <h3>Why is the first run slow? What if my program never stops?</h3>
+    <p>The first run has to load the compiler or interpreter. The C++ compiler is large, so this can take 10 to 30 seconds or more; after that it stays fast while the app is open. If a program never ends (for example an infinite loop), tap Stop.</p>
+  </div>
+  <div class="card">
+    <h3>Where is my homework saved? How do I back it up or move it to a new device?</h3>
+    <p>Homework is saved on your device. You can also find it in the Files app under On My iPhone (On My iPad on iPad) → Code Practice → 作业 (the homework folder).</p>
+    <p>Choose “Export All Homework (Backup)” on the Homework screen or in Settings to get a zip archive with one code file per homework, which you can also open on a computer. On a new device, use “Import Code Files or Backup” and pick the archive to restore titles and dates.</p>
+    <p>Note: deleting the app also deletes all homework, so back up first.</p>
+  </div>
+  <div class="card">
+    <h3>How do I open code files I received in another app?</h3>
+    <p>Open the file in Mail, WeChat or another app, tap Share (or “Open in”), and choose Code Practice. The file is imported as homework. .cpp, .py, .txt and other formats are supported, and files saved in UTF-8, GBK or Big5 display correctly.</p>
+  </div>
+  <div class="card">
+    <h3>How do I hand in my code?</h3>
+    <p>On the code screen, open Export to export the code as a source file, an image or a PDF, optionally with the output, then send it or save it to Files.</p>
+  </div>
+  <h2>Privacy</h2>
+  <p>Code Practice requires no sign-in, collects no personal information and has no ads. Your code stays on your device. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  <footer>© 2026 Hongqun Luo</footer>
+</main>
+</body>
+</html>

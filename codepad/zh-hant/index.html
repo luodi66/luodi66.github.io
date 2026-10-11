@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>編程練習 · 使用說明</title>
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="alternate" hreflang="zh-CN" href="https://luodi66.github.io/codepad/">
+<link rel="alternate" hreflang="zh-Hant" href="https://luodi66.github.io/codepad/zh-hant/">
+<link rel="alternate" hreflang="en" href="https://luodi66.github.io/codepad/en/">
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --card: #f5f5f7; --accent: #3b63f3; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --card: #1c1c1e; --accent: #7f9bff; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--fg); background: var(--bg); line-height: 1.75;
+         font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 20px 20px 48px; }
+  nav.langs { text-align: right; font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+  nav.langs a, nav.langs strong { margin-left: 12px; }
+  header { display: flex; align-items: center; gap: 16px; }
+  header img { width: 72px; height: 72px; border-radius: 16px; }
+  h1 { font-size: 28px; margin: 0; line-height: 1.3; }
+  .subtitle { color: var(--muted); margin: 4px 0 0; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  h3 { font-size: 16px; margin: 0 0 4px; }
+  p { margin: 6px 0; }
+  .card { background: var(--card); border-radius: 14px; padding: 14px 18px; margin: 12px 0; }
+  .muted { color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.92em; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<main>
+  <nav class="langs"><a href="../" hreflang="zh-CN">简体中文</a><strong>繁體中文</strong><a href="../en/" hreflang="en">English</a></nav>
+  <header>
+    <img src="../icon.png" alt="編程練習">
+    <div>
+      <h1>編程練習</h1>
+      <p class="subtitle">在 iPhone 和 iPad 上離線執行 C++ 和 Python 程式碼</p>
+    </div>
+  </header>
+  <p>編程練習是一款寫程式、執行程式的練習工具。C++ 和 Python 程式碼直接在你的裝置上編譯執行，不需要連網，也不需要電腦；出錯時有中文提示，適合學生課後練習和完成作業。</p>
+  <h2>聯絡我們</h2>
+  <div class="card">
+    <p>遇到問題或有建議，請寄電子郵件到 <a href="mailto:849563983@qq.com">849563983@qq.com</a>。</p>
+    <p>回報問題時，請寫上裝置型號（例如 iPhone 15）、系統版本，以及出問題的程式碼和輸入的資料，方便我們排查。</p>
+  </div>
+  <h2>常見問題</h2>
+  <div class="card">
+    <h3>怎麼給程式輸入資料（cin、input）？</h3>
+    <p>有兩種方法：① 直接執行，程式等待輸入時，主控台下方的輸入框會變成橘色，在裡面輸入後按 Return 送出；② 執行前打開「預先輸入」，把所有輸入一次填好，適合資料很多的題目。</p>
+  </div>
+  <div class="card">
+    <h3>編譯錯誤看不懂怎麼辦？</h3>
+    <p>出錯的那一行會標成紅色，主控台裡會附上中文提示，告訴你大概是哪裡錯了。執行前 App 還會檢查全形標點，發現全形分號「；」、全形括號「（）」等，會提示你一鍵改正。</p>
+  </div>
+  <div class="card">
+    <h3>支援哪些 C++ 標準？</h3>
+    <p>C++11、C++14、C++17 和 C++20。可以在「設定」裡切換，也可以點寫程式頁面右上角顯示的標準（例如「C++17」）切換。也支援 <code>#include &lt;bits/stdc++.h&gt;</code> 萬用標頭檔。</p>
+  </div>
+  <div class="card">
+    <h3>為什麼不能用 try / catch？</h3>
+    <p>內建的 C++ 編譯器暫不支援例外，用到 <code>try</code>、<code>throw</code> 的程式碼會編譯失敗。可以改用回傳值或 <code>if</code> 判斷來處理錯誤。</p>
+  </div>
+  <div class="card">
+    <h3>C++ 能讀寫檔案、用多執行緒嗎？</h3>
+    <p>暫不支援讀寫檔案（<code>fstream</code>、<code>freopen</code>）和多執行緒。練習時請先把 <code>freopen</code> 註解掉，直接從鍵盤輸入。</p>
+  </div>
+  <div class="card">
+    <h3>Python 能用 numpy、turtle 嗎？</h3>
+    <p>不能。目前只包含 Python 標準函式庫（例如 math、random、collections），不能安裝第三方套件，也不支援 turtle 這類需要圖形視窗的功能。</p>
+  </div>
+  <div class="card">
+    <h3>第一次執行為什麼比較慢？程式停不下來怎麼辦？</h3>
+    <p>第一次執行時要先載入編譯器或直譯器，C++ 的編譯器比較大，可能要等十幾秒到幾十秒，之後在 App 開啟期間就很快了。程式一直不結束（例如寫成了無窮迴圈）時，點「停止」即可。</p>
+  </div>
+  <div class="card">
+    <h3>作業儲存在哪裡？怎麼備份、換手機？</h3>
+    <p>作業儲存在你的裝置上，在「檔案」App 的「我的 iPhone」（iPad 上為「我的 iPad」）→「編程練習」→「作业」資料夾裡也能找到。</p>
+    <p>在「作業」頁面或「設定」裡選「匯出全部作業（備份）」，會得到一個 zip 壓縮檔，每份作業是一個程式碼檔案，在電腦上也能直接開啟。換了手機後，用「匯入程式碼檔案或備份」選這個壓縮檔，就能還原作業的名稱和時間。</p>
+    <p>注意：刪除 App 會同時刪除所有作業，刪除前請先備份。</p>
+  </div>
+  <div class="card">
+    <h3>怎麼開啟其他 App 裡收到的程式碼檔案？</h3>
+    <p>在 LINE、微信、郵件等 App 裡打開檔案，用「分享」或「以其他 App 開啟」選擇「編程練習」，檔案就會匯入為一份作業。支援 .cpp、.py、.txt 等格式，Windows 記事本、Dev-C++ 儲存的 Big5 或 GBK 編碼檔案也能正確顯示中文。</p>
+  </div>
+  <div class="card">
+    <h3>怎麼把程式碼交給老師？</h3>
+    <p>在寫程式的頁面打開「匯出」，可以匯出成程式碼檔案、圖片或 PDF，還可以附上執行結果，然後用通訊軟體傳送或儲存到「檔案」。</p>
+  </div>
+  <h2>隱私</h2>
+  <p>編程練習不需要註冊登入，不蒐集任何個人資料，沒有廣告，程式碼只儲存在你的裝置上。詳見<a href="privacy.html">隱私權政策</a>。</p>
+  <footer>© 2026 Hongqun Luo</footer>
+</main>
+</body>
+</html>
