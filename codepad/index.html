@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编程练习 · 使用帮助</title>
+<meta name="description" content="编程练习：在 iPhone 和 iPad 上离线写代码、运行 C++ 和 Python。使用帮助、常见问题和联系方式。">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --card: #f5f5f7; --accent: #3b63f3; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #000000; --card: #1c1c1e; --accent: #7f9bff; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--fg); background: var(--bg); line-height: 1.75;
+         font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
+  header { display: flex; align-items: center; gap: 16px; }
+  header img { width: 72px; height: 72px; border-radius: 16px; }
+  h1 { font-size: 28px; margin: 0; line-height: 1.3; }
+  .subtitle { color: var(--muted); margin: 4px 0 0; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  h3 { font-size: 16px; margin: 0 0 4px; }
+  p { margin: 6px 0; }
+  .card { background: var(--card); border-radius: 14px; padding: 14px 18px; margin: 12px 0; }
+  a { color: var(--accent); }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.92em; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="编程练习图标">
+    <div>
+      <h1>编程练习</h1>
+      <p class="subtitle">在 iPhone 和 iPad 上离线运行 C++ 和 Python 代码</p>
+    </div>
+  </header>
+
+  <p>编程练习是一款写代码、运行代码的练习工具。C++ 和 Python 代码直接在你的设备上编译运行，不需要联网，也不需要电脑；出错时有中文提示，适合学生课后练习和完成作业。</p>
+
+  <h2>联系我们</h2>
+  <div class="card">
+    <p>遇到问题或有建议，请发邮件到 <a href="mailto:849563983@qq.com">849563983@qq.com</a>。</p>
+    <p>反馈问题时，请写上设备型号（例如 iPhone 15）、系统版本，以及出问题的代码和输入的数据，方便我们排查。</p>
+  </div>
+
+  <h2>常见问题</h2>
+
+  <div class="card">
+    <h3>怎么给程序输入数据（cin、input）？</h3>
+    <p>有两种方法：① 直接运行，程序等待输入时，控制台下方的输入框会变成橙色，在里面输入后按回车发送；② 运行前打开“预设输入”，把所有输入一次填好，适合数据很多的题目。</p>
+  </div>
+
+  <div class="card">
+    <h3>编译错误看不懂怎么办？</h3>
+    <p>出错的行会标成红色，控制台里会附上中文提示，告诉你大概是哪里错了。运行前 App 还会检查中文标点，发现中文分号“；”、中文括号“（）”等，会提示你一键改正。</p>
+  </div>
+
+  <div class="card">
+    <h3>支持哪些 C++ 标准？</h3>
+    <p>C++11、C++14、C++17 和 C++20。可以在“设置”里切换，也可以点写代码页面右上角显示的标准（例如“C++17”）切换。也支持 <code>#include &lt;bits/stdc++.h&gt;</code> 万能头文件。</p>
+  </div>
+
+  <div class="card">
+    <h3>为什么不能用 try / catch？</h3>
+    <p>内置的 C++ 编译器暂不支持异常，用到 <code>try</code>、<code>throw</code> 的代码会编译失败。可以改用返回值或 <code>if</code> 判断来处理错误。</p>
+  </div>
+
+  <div class="card">
+    <h3>C++ 能读写文件、用多线程吗？</h3>
+    <p>暂不支持读写文件（<code>fstream</code>、<code>freopen</code>）和多线程。练习时请把 <code>freopen</code> 先注释掉，直接从键盘输入。</p>
+  </div>
+
+  <div class="card">
+    <h3>Python 能用 numpy、turtle 吗？</h3>
+    <p>不能。目前只包含 Python 标准库（例如 math、random、collections），不能安装第三方库，也不支持 turtle 这类需要图形窗口的功能。</p>
+  </div>
+
+  <div class="card">
+    <h3>第一次运行为什么比较慢？程序停不下来怎么办？</h3>
+    <p>第一次运行时要先加载编译器或解释器，C++ 的编译器比较大，可能要等十几秒到几十秒，之后在 App 打开期间就很快了。程序一直不结束（比如写成了死循环）时，点“停止”即可。</p>
+  </div>
+
+  <div class="card">
+    <h3>作业保存在哪里？怎么备份、换手机？</h3>
+    <p>作业保存在你的设备上，在“文件”App 的“我的 iPhone”（iPad 上为“我的 iPad”）→“编程练习”→“作业”里也能找到。</p>
+    <p>在“作业”页面或“设置”里选“导出全部作业（备份）”，会得到一个 zip 压缩包，每份作业是一个代码文件，在电脑上也能直接打开。换了手机后，用“导入代码文件或备份”选这个压缩包，就能恢复作业的名称和时间。</p>
+    <p>注意：删除 App 会同时删除所有作业，删除前请先备份。</p>
+  </div>
+
+  <div class="card">
+    <h3>怎么打开微信、QQ 里收到的代码文件？</h3>
+    <p>在微信或 QQ 里点开文件，点右上角的“…”，选“用其他应用打开”，再选“编程练习”，文件就会导入为一份作业。支持 .cpp、.py、.txt 等格式，Windows 记事本、Dev-C++ 保存的 GBK 编码文件也能正确显示中文。</p>
+  </div>
+
+  <div class="card">
+    <h3>怎么把代码交给老师？</h3>
+    <p>在写代码的页面打开“导出”，可以导出成代码文件、图片或 PDF，还可以附上运行结果，然后发到微信、QQ 或存到“文件”。</p>
+  </div>
+
+  <h2>隐私</h2>
+  <p>编程练习不需要注册登录，不收集任何个人信息，没有广告，代码只保存在你的设备上。详见<a href="privacy.html">隐私政策</a>。</p>
+
+  <footer>© 2026 Hongqun Luo</footer>
+</main>
+</body>
+</html>
